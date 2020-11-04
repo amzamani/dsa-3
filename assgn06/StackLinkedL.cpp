@@ -73,59 +73,44 @@ void Display()
 
 int main()
 {
-    push(100);
-    push(90);
-    push(80);
-    push(70);
-    push(60);
+    
 
-    Display();
 
-    isEmpty();
 
-    cout << "Top most element in stack is : " << endl;
-    peek();
+    int ch, val;
+    cout << "1)Push\n";
+    cout << "2)Pop\n";
+    cout << "3)Is Empty\n";
+    cout << "4)Peek\n";
+        cout << "5)Display\n";
+            cout << "6)Exit\n";
+    do
+    {
+        cout << "Enter choice : " << endl;
+        cin >> ch;
+        switch (ch)
+        {
+        case 1:
+            cout << "Input for insertion: " << endl;
+            cin >> val;
+            push(val);
+            break;
+        case 2:
+            pop();
+            break;
+        case 3:
+            isEmpty();
+            break;
+        case 4:
+            peek();
+            break;
+        case 5:
+            Display();
+            break;
+        default:
+            cout << "Incorrect!\n";
+        }
+    } while (ch != 6);
 
-    cout << "The element popped out from Top of Stack is :" << endl;
-    cout << pop() << endl;
-
-    cout << "Top most element in stack is : " << endl;
-    peek();
-
- return 0;
-
-    // int ch, val;
-    // cout << "1)Push\n";
-    // cout << "2)Pop\n";
-    // cout << "3)Is Empty\n";
-    // cout << "4)Peek\n";
-    //     cout << "5)Display\n";
-    //         cout << "6)Exit\n";
-    // do
-    // {
-    //     cout << "Enter choice : " << endl;
-    //     cin >> ch;
-    //     switch (ch)
-    //     {
-    //     case 1:
-    //         cout << "Input for insertion: " << endl;
-    //         cin >> val;
-    //         push(val);
-    //         break;
-    //     case 2:
-    //         pop();
-    //         break;
-    //     case 3:
-    //         isEmpty();
-    //         break;
-    //     case 4:
-    //         peek();
-    //         break;
-    //     case 5:
-    //         Display();
-    //         break;
-    //     default:
-    //         cout << "Incorrect!\n";
-    //     }
-    // } while (ch != 6);
+     return 0;
 }
